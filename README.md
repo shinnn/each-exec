@@ -58,7 +58,7 @@ When one of the commands fails, it immediately calls the callback function and t
 It doesn't pass any values to the second argument and third argument, if one of the commands fails.
 
 ```javascript
-execSeries([
+eachExec([
   'echo foo',
   'exit 200',
   'echo bar'
@@ -73,7 +73,7 @@ execSeries([
 Callback function is optional.
 
 ```javascript
-execSeries(['mkdir foo', 'mkdir bar']);
+eachExec(['mkdir foo', 'mkdir bar']);
 
 setTimeout(function() {
   fs.existsSync('foo'); //=> true
